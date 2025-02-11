@@ -1,0 +1,57 @@
+import { create } from 'zustand'
+
+export interface ParticipantState {
+    logged: boolean,
+    accountType : string,
+    airtable_id: string,
+    loading: boolean,
+    dashboardMenu : boolean,
+    landingMenu : boolean,
+    invitationBadge: boolean,
+    invitationArr: Array<string>;
+    messageBadge: boolean,
+    messages: Array<any>,
+    jobErrorShown: boolean,
+    auth_loading: boolean,
+    setLogged: (value: boolean) => void,
+    setAccountType: (value: string) => void,
+    setAirtableId: (value: string) => void,
+    setAuthLoading: (value: boolean) => void,
+    setDataLoading: (value: boolean) => void,
+    setDashboardMenu: (value: boolean) => void,
+    setLandingMenu: (value: boolean) => void,
+    setInvitationBadge: (value: boolean) => void,
+    setInvitationArr: (value: Array<string>) => void,
+    setMessageBadge: (value: boolean) => void,
+    setMessages: (value: Array<any>) => void,
+    setJobErrorShown: (value: boolean) => void,
+}
+
+const useParticipantStore = create<ParticipantState>((set) => ({
+    logged: false,
+    accountType : '',
+    airtable_id : '',
+    loading: false,
+    dashboardMenu : false,
+    landingMenu : false,
+    invitationBadge: false,
+    invitationArr: [],
+    messageBadge: false,
+    messages: [],
+    jobErrorShown : false,
+    auth_loading: false,
+    setLogged: (value: boolean) => set((state) => ({ logged: value })),
+    setAccountType: (value: string) => set((state) => ({ accountType: value })),
+    setAirtableId: (value: string) => set((state) => ({ airtable_id: value })),
+    setDataLoading: (value: boolean) => set((state) => ({ loading: value })),
+    setAuthLoading: (value: boolean) => set((state) => ({ auth_loading: value })),
+    setDashboardMenu: (value: boolean) => set((state) => ({ dashboardMenu: value })),
+    setLandingMenu: (value: boolean) => set((state) => ({ landingMenu: value })),
+    setInvitationBadge: (value: boolean) => set((state) => ({ invitationBadge: value })),
+    setInvitationArr: (value: Array<string>) => set((state) => ({ invitationArr: value })),
+    setMessageBadge: (value: boolean) => set((state) => ({ messageBadge: value })),
+    setMessages: (value: Array<any>) => set((state) => ({ messages: value })),
+    setJobErrorShown: (value: boolean) => set((state) => ({ jobErrorShown: value })),
+}));
+
+export default useParticipantStore;

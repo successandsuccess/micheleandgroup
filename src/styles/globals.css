@@ -1,0 +1,363 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+    color: black;
+  }
+}
+
+body {
+  color: black;
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(#fff)
+    )
+    rgb(#fff);
+  font-family: "Montserrat", sans-serif;
+}
+
+pre {
+  font-family: "Montserrat" !important;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  margin-top: 10px;
+  z-index: 99998;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border: 3px solid white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+pre{
+  white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+ul {
+  list-style-type: circle;
+  list-style-position: inside;
+}
+
+ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+a {
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.17em;
+}
+
+.ql-toolbar.ql-snow {
+  /* border: 2px solid #ddd !important; */
+  border: 0px !important;
+  border-bottom: 2px solid #ddd !important;
+  border-top-right-radius: 10px !important;
+  border-top-left-radius: 10px !important;
+}
+
+.ql-container.ql-snow {
+  border: 0px !important;
+  /* border: 2px solid #ddd !important;
+  border-top: 0px !important;
+  border-bottom-right-radius: 10px !important;
+  border-bottom-left-radius: 10px !important; */
+}
+
+.primary-shadow {
+  box-shadow: 0px 4px 20px 0px rgba(231, 181, 50, 0.5);
+}
+
+.secondary-shadow {
+  box-shadow: 0px 10px 15px -3px rgba(231, 181, 50, 0.2);
+}
+
+.primary-gradient {
+  background: linear-gradient(
+    180deg,
+    rgba(231, 180, 50, 0.1) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+}
+
+.instagram-gradient {
+  background: linear-gradient(180deg, #7623be 0%, #de943e 100%);
+}
+
+.contact-background {
+  background-image: url("/assets/images/ContactUs-Mask.png");
+}
+
+.mobileheight {
+  height: calc(100vh - 58px);
+}
+
+.primary-transition {
+  transition-property: all;
+  transition-duration: 0.25s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+}
+
+.layout-width {
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.contact-section {
+  display: grid;
+  grid-template-columns: minmax(0, 2.5fr) minmax(0, 1fr);
+  gap: 30px;
+}
+
+.talent-section {
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 3fr);
+}
+.fc-button {
+  background-color: #e7b532 !important;
+  border: none !important;
+}
+
+.fc-button:hover {
+  background-color: #e7b53266 !important;
+}
+
+.react-multiple-carousel__arrow {
+  z-index: 20 !important;
+}
+
+.sidebar {
+  min-width: 330px;
+  height: calc(100vh - 80px);
+  position: sticky;
+  top: 80px;
+}
+
+.profile-section {
+  grid-template-columns: 490px minmax(0, 1fr);
+}
+
+table {
+  border: 2px solid #ddd;
+}
+th {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+td {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+.select-search-container {
+  width: 100% !important;
+}
+
+.select-search-input {
+  width: 100% !important;
+  height: 60px !important;
+  border-radius: 15px !important;
+  outline: none;
+  border: 0px !important;
+  /* border-color: #ddd !important; */
+}
+
+.select-search-input:hover {
+  border: 0px !important;
+  /* border-color: #ddd !important; */
+}
+
+.select-search-select {
+  border: 0px !important;
+  /* border-color: #ddd !important; */
+  z-index: 20 !important;
+}
+
+#job-info > h2 > button {
+  background-color: #eee !important;
+  padding: 16px 20px !important;
+}
+
+#job-info > h2 > button > div > span {
+  font-weight: bold !important;
+  font-size: 20px !important;
+}
+
+#rate-info > h2 > button {
+  background-color: #eee !important;
+  padding: 16px 20px !important;
+}
+
+#rate-info > h2 > button > div > span {
+  font-weight: bold !important;
+  font-size: 20px !important;
+}
+
+#terms-info > h2 > button {
+  background-color: #eee !important;
+  padding: 16px 20px !important;
+}
+
+#terms-info > h2 > button > div > span {
+  font-weight: bold !important;
+  font-size: 20px !important;
+}
+
+.accordion-items > h2 > button {
+  background-color: #eee !important;
+  padding: 8px 12px !important;
+}
+
+.accordion-items > h2 > button > div > span {
+  font-weight: bold !important;
+  font-size: 13px !important;
+}
+
+#accordion {
+  padding: 0px 0px !important;
+}
+
+#atcb-reference{
+  opacity: 0 !important;
+}
+
+@media (min-width: 576px) {
+  .layout-width {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .layout-width {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .layout-width {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .layout-width {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .layout-width {
+    max-width: 1320px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .talent-section {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+  }
+  .sidebar {
+    max-width: 375px;
+    position: fixed;
+    top: 80px;
+    z-index: 20;
+    left: 0px;
+    height: calc(100vh);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .contact-section {
+    gap: 30px;
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .talent-section {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .sidebar {
+    top: 80px;
+  }
+}
+
+@media screen and (max-width: 981px) {
+  .profile-section {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.125fr);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .talent-section {
+    grid-template-columns: 1fr;
+  }
+  .profile-section {
+    grid-template-columns: initial;
+  }
+  .search-conatiner {
+    height: calc(100vh - 80px) !important;
+  }
+  th {
+    padding: 4px;
+    border: 1px solid #ddd;
+  }
+  td {
+    padding: 4px;
+    border: 1px solid #ddd;
+  }
+  .fc-toolbar.fc-header-toolbar {
+    flex-direction: column;
+  }
+  .fc-toolbar-chunk {
+    display: table-row;
+    text-align: center;
+    padding: 5px 0;
+  }
+  .fc-event{
+    padding: 5px 0;
+    font-size: 12px !important;
+  }
+}
